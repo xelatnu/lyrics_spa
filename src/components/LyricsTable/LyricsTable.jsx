@@ -1,30 +1,24 @@
-import { lyricsService } from '../../features/lyricsService';
-import TableHeader from './components/LyricsTableHeader';
-import TableRow from './components/LyricsTableRow';
+import React from 'react';
+import TableHeader from '../LyricsTableHeader/LyricsTableHeader';
+import TableRow from '../lyricsTableRow/LyricsTableRow';
+import './lyricsTable.css';
 
-
-
-const LyricsTable = ({ lyricsData }) => {
-  return (
-    <table className="table table-hover">
-      <TableHeader />
-      {/* <TableRow song='test' artist='grisa' album='nou' link={'test'} />
-      <TableRow song='test' artist='grisa' album='nou' link={'test'} />
-      <TableRow song='test' artist='grisa' album='nou' link={'test'} />
-      <TableRow song='test' artist='grisa' album='nou' link={'test'} />
-      <TableRow song='test' artist='grisa' album='nou' link={'test'} /> */}
-
-      {lyricsData.map(({ song, artist, album, ...restItem }) =>
-        <TableRow
-          song={song}
-          songLink={restItem['song-link']}
-          artist={artist}
-          artistLink={restItem['artist-link']}
-          album={album} />
-      )}
-    </table>
-  )
-}
-
+const LyricsTable = ({ lyricsData }) => (
+  <table className="table table-dark table-hover">
+    <TableHeader />
+    {lyricsData.map(({
+      song, artist, album, ...restItem
+    }, index) => (
+      <TableRow
+          // eslint-disable-next-line react/no-array-index-key
+        key={index}
+        song={song}
+        songLink={restItem['song-link']}
+        artist={artist}
+        artistLink={restItem['artist-link']}
+        album={album}
+      />
+    ))}
+  </table>
+);
 export default LyricsTable;
-
