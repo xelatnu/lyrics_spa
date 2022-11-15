@@ -1,14 +1,12 @@
-import SearchPanel from './components/LyricsSearchPanel/LyricsSearchPanel';
+import React from 'react';
+import LyricsSearchPanel from '../LyricsSearchPanel/LyricsSearchPanel';
 
-const LyricsHeader = ({ setLyricsData }) => {
-  return (
-    <header className="App-header">
-      <h1>
-        Search your favorit song lyrics
-      </h1>
-      <SearchPanel setLyricsData={setLyricsData} />
-    </header>
-  )
-}
-
+const LyricsHeader = ({ searchLyrics }) => (
+  <header className="app-header">
+    <h1>
+      Search your favorite song lyrics
+    </h1>
+    <LyricsSearchPanel searchLyrics={searchLyrics} />
+  </header>
+);
 export default LyricsHeader;
