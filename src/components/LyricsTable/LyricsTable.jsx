@@ -1,7 +1,7 @@
 import React from 'react';
 import TableHeader from '../LyricsTableHeader/LyricsTableHeader';
 import TableRow from '../lyricsTableRow/LyricsTableRow';
-import './lyricsTable.css';
+// import './lyricsTable.css';
 
 const LyricsTable = ({ lyricsData }) => (
   <table className="table table-dark table-hover">

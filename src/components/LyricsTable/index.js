@@ -1,3 +1,3 @@
-import LyricsTable from "./LyricsTable";
+import LyricsTable from './LyricsTable';
 
 export default LyricsTable;
