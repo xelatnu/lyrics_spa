@@ -10,8 +10,8 @@ const useLyricsSearch = () => {
       setIsLoading(true);
       const res = await lyricsService.getLyrics(lyrics, artist);
       setLyricsData(res);
-    } catch (error) {
-      alert('Please wait a few minutes before try again');
+    } catch (err) {
+      alert('Sorry, some errors occurs. Try later.');
     } finally {
       setIsLoading(false);
     }

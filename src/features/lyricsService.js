@@ -1,4 +1,4 @@
-import { BASE_URL, UID, TOKEN_ID } from './LyricsServiceProps'
+import { BASE_URL, UID, TOKEN_ID } from './LyricsServiceProps';
 
 class LyricsService {
   constructor(baseUrl, tokenid, uid) {
