@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TableHeader from '../LyricsTableHeader/LyricsTableHeader';
-import TableRow from '../lyricsTableRow/LyricsTableRow';
+import TableRow from '../../features/lyricsTableRow/LyricsTableRow';
+
 // import './lyricsTable.css';
 
 const LyricsTable = ({ lyricsData }) => (
@@ -21,4 +23,13 @@ const LyricsTable = ({ lyricsData }) => (
     ))}
   </table>
 );
+
+LyricsTable.defaultProps = {
+  lyricsData: [],
+};
+
+LyricsTable.propTypes = {
+  lyricsData: PropTypes.array,
+};
+
 export default LyricsTable;

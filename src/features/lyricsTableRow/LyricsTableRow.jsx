@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const TableRow = ({
   song, songLink, artist, artistLink, album,
@@ -12,5 +13,13 @@ const TableRow = ({
     </tr>
   </tbody>
 );
+
+TableRow.propTypes = {
+  song: PropTypes.string.isRequired,
+  songLink: PropTypes.string.isRequired,
+  artist: PropTypes.string.isRequired,
+  artistLink: PropTypes.string.isRequired,
+  album: PropTypes.string.isRequired,
+};
 
 export default TableRow;

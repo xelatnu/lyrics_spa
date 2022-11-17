@@ -1,5 +1,6 @@
 /* eslint-disable react/function-component-definition */
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './lyrics-search-panel.css';
 
 const defValues = {
@@ -25,6 +26,7 @@ function LyricsSearchPanel({ searchLyrics }) {
     <div>
       <form onSubmit={handleSubmit}>
         <input
+          data-testid="search-input"
           name="lyrics"
           value={formData.lyrics}
           onChange={onChange}
@@ -41,10 +43,14 @@ function LyricsSearchPanel({ searchLyrics }) {
           className="search-input "
           placeholder="Type artist"
         />
-        <button type="submit" className="btn btn-primary">Search lyrics</button>
+        <button data-testid="submit-button" type="submit" className="btn btn-primary">Search lyrics</button>
       </form>
     </div>
   );
 }
+
+LyricsSearchPanel.propTypes = {
+  searchLyrics: PropTypes.func.isRequired,
+};
 
 export default LyricsSearchPanel;

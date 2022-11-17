@@ -3,17 +3,20 @@ import React from 'react';
 import LyricsHeader from '../components/LyricsHeader/LyricsHeader';
 import LyricsTable from '../components/LyricsTable/LyricsTable';
 import LoadingSpinner from '../components/loadingSpinner/loadingSpinner';
-import useLyricsSearch from '../components/hooks/useLyricsSearch';
+import useLyricsSearch from '../hooks/useLyricsSearch';
+import Modal from '../components/modal/modal';
 import './App.css';
 
 function App() {
-  const [searchLyrics, { isLoading, lyricsData }] = useLyricsSearch();
+  const [searchLyrics, { isLoading, lyricsData, error }] = useLyricsSearch();
 
   return (
     <div className="app">
       {isLoading
         ? <LoadingSpinner />
-        : <LyricsHeader searchLyrics={searchLyrics} />}
+        : error
+          ? <Modal />
+          : <LyricsHeader title="Welcome to Search Lyrics App" searchLyrics={searchLyrics} />}
       {lyricsData?.length ? <LyricsTable lyricsData={lyricsData} /> : null}
     </div>
   );
