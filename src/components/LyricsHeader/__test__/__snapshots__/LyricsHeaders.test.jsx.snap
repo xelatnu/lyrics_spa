@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LyricsHeader should match a snapshot 1`] = `
+<body>
+  <div>
+    <header
+      class="app-header"
+    >
+      <h1
+        data-testid="header-1"
+      />
+      <h2
+        title="Header"
+      >
+        Search your favorite song lyrics
+      </h2>
+      <div>
+        <form>
+          <input
+            class="search-input "
+            data-testid="search-input"
+            name="lyrics"
+            placeholder="Type lyrics"
+            required=""
+            type="text"
+            value=""
+          />
+          <input
+            class="search-input "
+            name="artist"
+            placeholder="Type artist"
+            type="text"
+            value=""
+          />
+          <button
+            class="btn btn-primary"
+            data-testid="submit-button"
+            type="submit"
+          >
+            Search lyrics
+          </button>
+        </form>
+      </div>
+    </header>
+  </div>
+</body>
+`;
+
+exports[`LyricsHeader should match to snapshot 1`] = `
+<body>
+  <div>
+    <header
+      class="app-header"
+    >
+      <h1
+        data-testid="header-1"
+      />
+      <h2
+        title="Header"
+      >
+        Search your favorite song lyrics
+      </h2>
+      <div>
+        <form>
+          <input
+            class="search-input "
+            data-testid="search-input"
+            name="lyrics"
+            placeholder="Type lyrics"
+            required=""
+            type="text"
+            value=""
+          />
+          <input
+            class="search-input "
+            name="artist"
+            placeholder="Type artist"
+            type="text"
+            value=""
+          />
+          <button
+            class="btn btn-primary"
+            data-testid="submit-button"
+            type="submit"
+          >
+            Search lyrics
+          </button>
+        </form>
+      </div>
+    </header>
+  </div>
+</body>
+`;
