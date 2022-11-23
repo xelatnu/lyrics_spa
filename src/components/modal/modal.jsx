@@ -19,7 +19,7 @@ const Modal = () => (
         color: 'red',
       }}
     >
-      Probably incorrect artist or lyrics. Try to yse only lyrics search criteria.
+      Probably incorrect artist or lyrics. Please try again only with lyrics search criteria.
 
     </h3>
   </div>

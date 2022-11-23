@@ -29,7 +29,7 @@ LyricsTable.defaultProps = {
 };
 
 LyricsTable.propTypes = {
-  lyricsData: PropTypes.array,
+  lyricsData: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
 };
 
 export default LyricsTable;

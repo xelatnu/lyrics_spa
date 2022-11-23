@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import lyricsService from '../service/LyricsService';
+import { lyricsService } from '../../service/LyricsService';
 
 const useLyricsSearch = () => {
   const [lyricsData, setLyricsData] = useState([]);
@@ -10,14 +10,9 @@ const useLyricsSearch = () => {
     try {
       setIsLoading(true);
       const res = await lyricsService.getLyrics(lyrics, artist);
-      if (res === undefined) {
-        console.log('NO info');
-        setError(true);
-      } else {
-        setLyricsData(res);
-      }
+      setLyricsData(res);
     } catch (err) {
-      alert('Sorry, some errors occurs. Try later.');
+      setError(true);
     } finally {
       setIsLoading(false);
     }

@@ -3,7 +3,7 @@ import React from 'react';
 import LyricsHeader from '../components/LyricsHeader/LyricsHeader';
 import LyricsTable from '../components/LyricsTable/LyricsTable';
 import LoadingSpinner from '../components/loadingSpinner/loadingSpinner';
-import useLyricsSearch from '../hooks/useLyricsSearch';
+import useLyricsSearch from '../hooks/useLyricsSearch/useLyricsSearch';
 import Modal from '../components/modal/modal';
 import './App.css';
 

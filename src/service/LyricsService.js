@@ -1,6 +1,6 @@
 import { BASE_URL, UID, TOKEN_ID } from './LyricsServiceProps';
 
-class LyricsService {
+export class LyricsService {
   constructor(baseUrl, tokenid, uid) {
     this.baseUrl = baseUrl;
     this.uid = uid;
@@ -12,15 +12,14 @@ class LyricsService {
       uid: this.uid,
       tokenid: this.tokenid,
       term: lyricsValue,
-      artist: artist,
+      artist,
       format: 'json',
     }));
-
     const { result } = await res.json();
+    if (!result) throw new Error();
+    console.log(result);
     return result;
   }
 }
 
-const lyricsService = new LyricsService(BASE_URL, TOKEN_ID, UID);
-
-export default lyricsService;
+export const lyricsService = new LyricsService(BASE_URL, TOKEN_ID, UID);
