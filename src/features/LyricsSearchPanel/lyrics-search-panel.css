@@ -1,0 +1,22 @@
+.container-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  margin: 5px;
+}
+
+.btn {
+  height: 35px;
+  width: 150px;
+}
+
+.form {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
