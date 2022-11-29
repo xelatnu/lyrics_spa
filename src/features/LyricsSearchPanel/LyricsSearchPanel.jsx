@@ -1,6 +1,5 @@
 /* eslint-disable react/function-component-definition */
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import './lyrics-search-panel.css';
 
 const defValues = {
@@ -8,7 +7,8 @@ const defValues = {
   artist: '',
 };
 
-function LyricsSearchPanel({ searchLyrics }) {
+// eslint-disable-next-line react/prop-types
+function LyricsSearchPanel({ onSearch }) {
   const [formData, setFormData] = useState(defValues);
 
   const onChange = (event) => {
@@ -18,24 +18,33 @@ function LyricsSearchPanel({ searchLyrics }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    searchLyrics(formData);
+    onSearch(formData);
     setFormData(defValues);
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="container-form">
+      <h2
+        title="Header"
+        style={{
+          color: 'white',
+        }}
+      >
+        Search your favorite song lyrics
+      </h2>
+      <form onSubmit={handleSubmit} className="form">
         <input
-          data-testid="search-input"
+          data-testid="lyrics-input"
           name="lyrics"
           value={formData.lyrics}
           onChange={onChange}
           type="text"
-          className="search-input "
+          className="lyrics-input "
           placeholder="Type lyrics"
           required
         />
         <input
+          data-testid="artist-input"
           name="artist"
           value={formData.artist}
           onChange={onChange}
@@ -48,9 +57,5 @@ function LyricsSearchPanel({ searchLyrics }) {
     </div>
   );
 }
-
-LyricsSearchPanel.propTypes = {
-  searchLyrics: PropTypes.func.isRequired,
-};
 
 export default LyricsSearchPanel;

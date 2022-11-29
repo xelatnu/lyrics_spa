@@ -4,23 +4,18 @@ const Modal = () => (
   <div
     className="modal-container"
     style={{
-      background: 'rgba(0, 0, 0, 0.834)',
-      width: '100%',
-      height: '100vh',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      position: 'fixed',
-      zIndex: '1',
+      margin: '20px',
+      background: 'rgba(40, 44, 52, 0.834)',
+      // display: 'flex',
+      // justifyContent: 'center',
     }}
   >
     <h3
       style={{
-        color: 'red',
+        color: 'fff',
       }}
     >
-      Probably incorrect artist or lyrics. Please try again only with lyrics search criteria.
-
+      Oops! Something went wrong. Please try again later.
     </h3>
   </div>
 );
