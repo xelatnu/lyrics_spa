@@ -1,0 +1,23 @@
+.container-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  border-radius: 6%;
+}
+
+.btn {
+  height: 35px;
+  width: 150px;
+  padding: 0;
+}
+
+.form {
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
