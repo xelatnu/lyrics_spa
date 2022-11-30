@@ -6,17 +6,18 @@
 }
 
 .search-input {
-  margin: 5px;
+  border-radius: 6%;
 }
 
 .btn {
   height: 35px;
   width: 150px;
+  padding: 0;
 }
 
 .form {
-  width: 800px;
+  width: 550px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
